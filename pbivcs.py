@@ -24,7 +24,7 @@ CONVERTERS = [
     ('Version', converters.NoopConverter()),
     ('Report/StaticResources/', converters.NoopConverter()),
     ('DataMashup', converters.DataMashupConverter()),
-    ('Metadata', converters.MetadataConverter()),
+    ('Metadata', converters.JSONConverter('utf-16-le')),
     ('*.json', converters.JSONConverter('utf-8'))
 ]
 

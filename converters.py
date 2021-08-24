@@ -346,32 +346,6 @@ class JSONConverter(Converter):
                           sort_keys=True) + "\n"
 
 
-class MetadataConverter(Converter):
-
-    def raw_to_vcs(self, b):
-        """ The metadata is nearly readable anyway, but let's just split into multiple lines """
-
-        # repr it so bytes are displayed in ascii
-        s = repr(b)
-
-        # now split it nicely into line items
-        if '\n' in s:
-            raise ValueError(
-                "TODO: '\n' is used as a terminator but already exists in string! Someone needs to write some code to dynamically pick the (possibly multi-byte) terminator ...")
-        splat = re.split('(\\\\x[0-9a-f]{2})([^\\\\x])', s)
-        out = ''
-        for i, spl in enumerate(splat):
-            if i % 3 == 2:
-                out += '\n'
-            out += spl
-        return out.encode('ascii')
-
-    def vcs_to_raw(self, b):
-        """ Undo the above prettification """
-
-        return ast.literal_eval(b.decode('ascii').replace('\n', ''))
-
-
 class DataMashupConverter(Converter):
     """
     The DataMashup file is a bit funky. The format is (roughly):
