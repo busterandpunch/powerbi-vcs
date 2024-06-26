@@ -1,10 +1,15 @@
-### Project status
+## Project status
 
-We're really busy at the moment (Jan 2018) and have put development of this on hold until we start to need it internally (which is likely to be a few months). If you're interested in using this, you have a few options:
+> ℹ️ TERMINATED - IN THE BEST WAY!
 
-- use it in it's current state - it's pretty hacky, but worked on our limited test set
-- fork it and make it better!
-- use the port (https://github.com/Togusa09/powerbi-vcs-dotnet) which may be more maintained etc.
+![PBI Tools](https://avatars.githubusercontent.com/u/47937466?s=200&v=4)
+
+The great work Mathias Thierbach has done at [PBI Tools](https://pbi.tools/) renders this completely obsolete.
+
+Take a look, view the code, and help out! [PBI Tools on github](https://github.com/pbi-tools)
+
+
+## Old Stuff below...
 
 ### File Format Specification
 
